@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "brain-games",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R1zd1ch/frontend-project-44.git"
+  },
+  "author": "R1zd1ch (Evgeniy)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R1zd1ch/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/R1zd1ch/frontend-project-44#readme"
+}
