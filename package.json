@@ -10,7 +10,7 @@
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js"
   },
-  "main": "index.js",
+  "main": "gameRunner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
