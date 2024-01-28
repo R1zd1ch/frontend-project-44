@@ -6,8 +6,9 @@
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-	"brain-calc": "bin/brain-calc.js",
-	"brain-gcd": "bin/brain-gcd.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js"
   },
   "main": "index.js",
   "scripts": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/R1zd1ch/frontend-project-44#readme",
   "dependencies": {
+    "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
