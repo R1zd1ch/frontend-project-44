@@ -15,7 +15,7 @@
 </ol>
 
 ```
-git clone git@github.com:Felarn/frontend-project-44.git
+git clone git@github.com:R1zd1ch/frontend-project-44.git
 cd frontend-project-44/
 make install
 ```
@@ -52,3 +52,8 @@ make install
 # brain-progression
 
 [![asciicast](https://asciinema.org/a/634127.svg)](https://asciinema.org/a/634127)
+
+
+# brain-prime
+
+[![asciicast](https://asciinema.org/a/634337.svg)](https://asciinema.org/a/634337)
