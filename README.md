@@ -20,6 +20,9 @@ cd frontend-project-44/
 make install
 ```
 
+[![asciicast](https://asciinema.org/a/634342.svg)](https://asciinema.org/a/634342)
+
+
 <p id="games" ></p>
 
 # Игры
