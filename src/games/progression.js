@@ -9,7 +9,7 @@ const maxStep = 10;
 const run = () => {
   const start = getRandomNumber(maxFirstElem);
   const step = getRandomNumber(minStep, maxStep);
-  const hideIndNum = getRandomNumber(0, 10);
+  const hideIndNum = getRandomNumber(0, 9);
   let next = start;
   let question = '';
   let answer = '';
