@@ -11,19 +11,15 @@ const run = () => {
   const step = getRandomNumber(minStep, maxStep);
   const hideIndNum = getRandomNumber(0, 9);
   let next = start;
-  let question = '';
-  let answer = '';
+  const progressionArr = [];
   for (let i = 0; i < progLen; i += 1) {
+    progressionArr.push(next);
     next += step;
-    if (i === hideIndNum) {
-      question = `${question} ..`;
-      answer = `${next}`;
-    } else {
-      question = `${question} ${next}`;
-    }
   }
-
-  return [question.trim(), answer];
+  const answer = String(progressionArr[hideIndNum]);
+  progressionArr[hideIndNum] = '..';
+  const question = progressionArr.join(' ');
+  return [question, answer];
 };
 
 const rule = 'What number is missing in the progression?';
