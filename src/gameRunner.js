@@ -1,16 +1,14 @@
 import readlineSync from 'readline-sync';
 import getName from './utils/cli.js';
-import games from './utils/gameVar.js';
 
 const maxRounds = 3;
 
-export default (gameName) => {
-  const game = games[gameName];
+const gameRun = (run, rule) => {
   const name = getName();
-  console.log(game.rule);
+  console.log(rule);
 
   for (let round = 1; round <= maxRounds; round += 1) {
-    const [questionForPlayer, correctAns] = game.run();
+    const [questionForPlayer, correctAns] = run();
     console.log(`Question: ${questionForPlayer}`);
     const playerAns = readlineSync.question('Your answer: ');
 
@@ -25,3 +23,5 @@ export default (gameName) => {
 
   console.log(`Congratulations, ${name}!`);
 };
+
+export default gameRun;

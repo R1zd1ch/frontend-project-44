@@ -1,6 +1,14 @@
 import getRandomNumber from '../utils/randomNumber.js';
+import gameRun from '../gameRunner.js';
 
 const maxNumb = 100;
+
+const findGCD = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return findGCD(b, a % b);
+};
 
 const run = () => {
   const num1 = getRandomNumber(maxNumb);
@@ -8,18 +16,12 @@ const run = () => {
 
   const lesserNum = Math.min(num1, num2);
   const biggerNum = Math.max(num1, num2);
-  let gcd;
   const question = `${biggerNum} ${lesserNum}`;
 
-  for (let variationGcd = lesserNum; variationGcd > 0; variationGcd -= 1) {
-    if ((lesserNum % variationGcd === 0) && (biggerNum % variationGcd === 0)) {
-      gcd = variationGcd;
-      break;
-    }
-  }
+  const gcd = findGCD(lesserNum, biggerNum);
   return [question, String(gcd)];
 };
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-export default { run, rule };
+export default () => gameRun(run, rule);

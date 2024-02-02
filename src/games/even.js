@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
+import gameRun from '../gameRunner.js';
 
 const maxNumb = 100;
 
@@ -10,4 +11,4 @@ const run = () => {
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export default { run, rule };
+export default () => gameRun(run, rule);
