@@ -7,14 +7,14 @@ const getName = () => {
 
 const roundsCount = 3;
 
-const gameData = (run, rule) => {
+const run = (generateRound, rule) => {
   console.log('Welcome to the Brain Games!');
   const name = getName();
   console.log(`Hello, ${name}!`);
   console.log(rule);
 
   for (let round = 1; round <= roundsCount; round += 1) {
-    const [questionForPlayer, correctAns] = run();
+    const [questionForPlayer, correctAns] = generateRound();
     console.log(`Question: ${questionForPlayer}`);
     const playerAns = readlineSync.question('Your answer: ');
 
@@ -30,4 +30,4 @@ const gameData = (run, rule) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default gameData;
+export default run;

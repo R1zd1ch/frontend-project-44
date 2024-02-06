@@ -1,10 +1,11 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameData from '../gameEngine.js';
+import run from '../gameEngine.js';
 
 const maxFirstElem = 20;
 const progLen = 10;
 const minStep = 1;
 const maxStep = 10;
+const progressionLength = 10;
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -18,21 +19,21 @@ const generateProgression = (start, step, length) => {
   return progression;
 };
 
-const run = () => {
+const generateRound = () => {
   const start = getRandomNumber(maxFirstElem);
   const step = getRandomNumber(minStep, maxStep);
-  const hideIndNum = getRandomNumber(0, 9);
+  const hiddenNumberIndex = getRandomNumber(0, progressionLength - 1);
 
-  const progressionArr = generateProgression(start, step, progLen);
+  const progressionArray = generateProgression(start, step, progLen);
 
-  const answer = String(progressionArr[hideIndNum]);
-  progressionArr[hideIndNum] = '..';
+  const answer = String(progressionArray[hiddenNumberIndex]);
+  progressionArray[hiddenNumberIndex] = '..';
 
-  const question = progressionArr.join(' ');
+  const question = progressionArray.join(' ');
 
   return [question, answer];
 };
 
 const rule = 'What number is missing in the progression?';
 
-export default () => gameData(run, rule);
+export default () => run(generateRound, rule);

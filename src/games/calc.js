@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameData from '../gameEngine.js';
+import run from '../gameEngine.js';
 
 const maxNumb = 20;
 
@@ -11,7 +11,7 @@ const operations = {
 
 const symbols = Object.keys(operations);
 
-const run = () => {
+const generateRound = () => {
   const num1 = getRandomNumber(maxNumb);
   const num2 = getRandomNumber(maxNumb);
   const symbol = symbols[getRandomNumber(symbols.length - 1)];
@@ -22,4 +22,4 @@ const run = () => {
 
 const rule = 'What is the result of the expression?';
 
-export default () => gameData(run, rule);
+export default () => run(generateRound, rule);

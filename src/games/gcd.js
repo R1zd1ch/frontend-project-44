@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameData from '../gameEngine.js';
+import run from '../gameEngine.js';
 
 const maxNumb = 100;
 
@@ -10,7 +10,7 @@ const findGCD = (a, b) => {
   return findGCD(b, a % b);
 };
 
-const run = () => {
+const generateRound = () => {
   const num1 = getRandomNumber(maxNumb);
   const num2 = getRandomNumber(maxNumb);
 
@@ -24,4 +24,4 @@ const run = () => {
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-export default () => gameData(run, rule);
+export default () => run(generateRound, rule);
