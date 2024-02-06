@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameRun from '../gameRunner.js';
+import gameRun from '../gameEngine.js';
 
 const maxNumb = 100;
 
