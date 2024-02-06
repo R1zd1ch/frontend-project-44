@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameRun from '../gameRunner.js';
+import gameData from '../gameRunner.js';
 
 const isPrime = (num) => {
   if (num <= 1) return false;
@@ -22,4 +22,4 @@ const run = () => {
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default () => gameRun(run, rule);
+export default () => gameData(run, rule);

@@ -3,9 +3,11 @@ import gameRun from '../gameRunner.js';
 
 const maxNumb = 100;
 
+const isEven = (number) => number % 2 === 0;
+
 const run = () => {
   const question = getRandomNumber(maxNumb);
-  const answer = question % 2 === 0 ? 'yes' : 'no';
+  const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 

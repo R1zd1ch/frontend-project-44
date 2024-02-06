@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameRun from '../gameRunner.js';
+import gameData from '../gameRunner.js';
 
 const maxNumb = 20;
 
@@ -22,4 +22,4 @@ const run = () => {
 
 const rule = 'What is the result of the expression?';
 
-export default () => gameRun(run, rule);
+export default () => gameData(run, rule);

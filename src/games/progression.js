@@ -1,27 +1,38 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameRun from '../gameRunner.js';
+import gameData from '../gameRunner.js';
 
 const maxFirstElem = 20;
 const progLen = 10;
 const minStep = 1;
 const maxStep = 10;
 
+const generateProgression = (start, step, length) => {
+  const progression = [];
+  let next = start;
+
+  for (let i = 0; i < length; i += 1) {
+    progression.push(next);
+    next += step;
+  }
+
+  return progression;
+};
+
 const run = () => {
   const start = getRandomNumber(maxFirstElem);
   const step = getRandomNumber(minStep, maxStep);
   const hideIndNum = getRandomNumber(0, 9);
-  let next = start;
-  const progressionArr = [];
-  for (let i = 0; i < progLen; i += 1) {
-    progressionArr.push(next);
-    next += step;
-  }
+
+  const progressionArr = generateProgression(start, step, progLen);
+
   const answer = String(progressionArr[hideIndNum]);
   progressionArr[hideIndNum] = '..';
+
   const question = progressionArr.join(' ');
+
   return [question, answer];
 };
 
 const rule = 'What number is missing in the progression?';
 
-export default () => gameRun(run, rule);
+export default () => gameData(run, rule);

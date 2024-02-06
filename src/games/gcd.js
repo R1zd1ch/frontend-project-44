@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/randomNumber.js';
-import gameRun from '../gameRunner.js';
+import gameData from '../gameRunner.js';
 
 const maxNumb = 100;
 
@@ -24,4 +24,4 @@ const run = () => {
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-export default () => gameRun(run, rule);
+export default () => gameData(run, rule);
