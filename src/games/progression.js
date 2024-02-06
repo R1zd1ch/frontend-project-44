@@ -2,7 +2,6 @@ import getRandomNumber from '../utils/randomNumber.js';
 import run from '../gameEngine.js';
 
 const maxFirstElem = 20;
-const progLen = 10;
 const minStep = 1;
 const maxStep = 10;
 const progressionLength = 10;
@@ -24,7 +23,7 @@ const generateRound = () => {
   const step = getRandomNumber(minStep, maxStep);
   const hiddenNumberIndex = getRandomNumber(0, progressionLength - 1);
 
-  const progressionArray = generateProgression(start, step, progLen);
+  const progressionArray = generateProgression(start, step, progressionLength);
 
   const answer = String(progressionArray[hiddenNumberIndex]);
   progressionArray[hiddenNumberIndex] = '..';
